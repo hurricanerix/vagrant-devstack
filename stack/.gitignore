@@ -1,0 +1,2 @@
+# Allows empty dir to be committed
+!.gitignore
