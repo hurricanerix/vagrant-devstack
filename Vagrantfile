@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "ubuntu/xenial64"
   config.vm.hostname = "devstack"
-  config.vm.provision :shell, path: "bootstrap/user-ubuntu.sh", privileged: false
+  config.vm.provision :shell, path: "bootstrap.sh", privileged: false
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -43,8 +43,7 @@ Vagrant.configure("2") do |config|
   # config.vm.synced_folder "../data", "/vagrant_data"
   # config.vm.synced_folder "devstack", "/opt/devstack", owner: "stack", group: "stack"
   # conifg.vm.synced_folder "stack", "/opt/stack", owner: "stack", group: "stack"
-  #config.vm.synced_folder "devstack", "/opt/devstack"
-  #config.vm.synced_folder "stack", "/opt/stack"
+  # config.vm.synced_folder "stack", "/opt/stack"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
